@@ -1,0 +1,43 @@
+
+<div class="search-patient-container">
+  <div class="search-patient-header">
+
+    <header data-thq="thq-navbar" class="search-patient-navbar-interactive">
+      <mat-icon (click)="goToHome()" aria-hidden="false" class="home-icon" aria-label="Example home icon" fontIcon="home"></mat-icon>
+      <div class="search-patient-logo">
+        <span >Search user</span>
+        <mat-icon (click)="searchPatient(searchPatientForm)" class="search-icon"> search </mat-icon>
+      </div>
+
+
+      <form #searchPatientForm="ngForm">
+        <div data-thq="thq-navbar-nav" class="search-patient-form" >
+          <input type="text" autofocus placeholder="Enter Patient's ID" autocomplete="on" class="search-patient-input" ngModel name="searchData">
+          <!-- <mat-form-field >
+            <mat-label>Select an option</mat-label>
+            <mat-select [value]="selected" name="selectedOption" ngModel  class="search-patient-select" >
+              <mat-option value="Name">Name </mat-option>
+              <mat-option value="Contact">Contact Number</mat-option>
+              <mat-option value="DOR">Date Of Registration</mat-option>
+              <mat-option > ELSE </mat-option>
+            </mat-select>
+          </mat-form-field> -->
+          <!-- <mat-icon (click)="searchPatient(searchPatientForm)" class="search-icon"> search </mat-icon> -->
+        </div>
+      </form>
+
+    </header>
+  </div>
+
+</div>
+
+<div class="alert alert-danger error-info" *ngIf="noUserFoundError">
+  <i class="fa fa-exclamation-circle" style="color: red;" aria-hidden="true"> </i>
+  NO USER FOUND
+
+</div>
+
+<div class="alert alert-danger error-info" *ngIf="serviceError">
+  <i class="fa fa-exclamation-circle" style="color: red;" aria-hidden="true"> </i>
+  Cannot retrieve patients right now, Please try again later2332
+</div>

@@ -1,0 +1,67 @@
+
+
+<!-- <div class="home-header">
+
+  <header data-thq="thq-navbar" class="home-navbar-interactive">
+
+    <div>
+      <mat-icon (click)="goToHome()" aria-hidden="false" class="home-icon" aria-label="Example home icon" fontIcon="home"></mat-icon>
+      <span class="home-logo">PROJECT</span>
+    </div>
+
+
+      <div data-thq="thq-navbar-nav" class="home-desktop-menu">
+
+        <nav class="home-links" *ngIf="!isDoctorLoggedIn">
+          <span routerLink="/welcome" fragment="about">About</span>
+          <span routerLink="/welcome" class="home-nav2" fragment="features">Features</span>
+          <span routerLink="/welcome" class="home-nav2" fragment="FAQ">FAQ</span>
+          <span routerLink="/welcome" class="home-nav4" fragment="team">Team</span>
+        </nav>
+
+        <nav class="home-links" *ngIf="isDoctorLoggedIn">
+          <span class="home-nav2" routerLink="/search-patient">Search Patient</span>
+          <span class="home-nav2" routerLink="/new-patient">Create a new Patient</span>
+        </nav>
+
+        <div *ngIf="!isDoctorLoggedIn" class="home-buttons">
+          <button class="home-login button" routerLink="/login" >Login</button>
+          <button class="home-register button">Register</button>
+        </div>
+      </div>
+
+
+  </header>
+</div> -->
+
+
+<!-- <div class="search-patient-container" *ngIf="isDoctorLoggedIn">
+  <div class="search-patient-header">
+    <header data-thq="thq-navbar" class="search-patient-navbar-interactive">
+      <span class="search-patient-logo">Search user</span>
+      <div data-thq="thq-navbar-nav" class="search-patient-desktop-menu">
+        <input
+          type="text"
+          autofocus
+          placeholder="Enter Patients Name"
+          autocomplete="on"
+          class="search-patient-textinput input"
+        />
+      </div>
+
+      <select class="search-patient-select">
+        <option value="Option 1">Patient's Name</option>
+        <option value="Option 2">Contact Number</option>
+        <option value="Option 3">Date Of Registration</option>
+      </select>
+
+    </header>
+
+  </div>
+
+</div> -->
+
+
+
+
+<router-outlet></router-outlet>

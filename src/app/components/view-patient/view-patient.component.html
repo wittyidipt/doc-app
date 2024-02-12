@@ -1,0 +1,106 @@
+<div class="search-patient-header">
+  <header data-thq="thq-navbar" class="search-patient-navbar-interactive">
+    User Profile for Sample User
+    <mat-icon (click)="goToHome()" aria-hidden="false" class="home-icon" aria-label="Example home icon" fontIcon="home"></mat-icon>
+  </header>
+</div>
+
+<div class="grid">
+
+  <div *ngIf="hasPatientFile" class="pdf-view container-fluid mt--7" [style]=" 'margin-top:10px'">
+    <embed [src]="patientFile" type="application/pdf" class="pdf-view">
+  </div>
+
+  <div class="patient-details container-fluid mt--7">
+    <div class="row">
+      <div class="col-xl-8">
+        <div class="card bg-secondary shadow card-body">
+
+            <form>
+              <h6 class="heading-small text-muted mb-4">User information</h6>
+              <div class="pl-lg-4">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <label class="form-control-label" for="input-username">Patient Name</label>
+                      <input type="text" id="input-username" class="form-control form-control-alternative" name="Name" [(ngModel)]="patientDetails.Name">
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <label class="form-control-label" for="input-email">Email address</label>
+                      <input type="email" id="input-email" class="form-control form-control-alternative" name="Email_ID" [(ngModel)]="patientDetails.Email_ID">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <label class="form-control-label" for="input-last-name">Date Of Registration</label>
+                      <input type="date" id="input-last-name" class="form-control form-control-alternative" name="DOR" [(ngModel)]="patientDetails.DOR">
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <!-- Patient Notes -->
+              <hr class="my-4" />
+              <h6 class="heading-small text-muted mb-4">Patient Notes</h6>
+              <div class="pl-lg-4">
+                <div class="form-group">
+                  <label>Notes</label>
+                  <textarea rows="4" class="form-control form-control-alternative" name="Patient_Notes" [(ngModel)]="patientDetails.Patient_Notes">Notes about the</textarea>
+                </div>
+              </div>
+
+              <!-- Address -->
+              <h6 class="heading-small text-muted mb-4">Contact information</h6>
+              <div class="pl-lg-4">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label class="form-control-label" for="input-address">Address</label>
+                      <input id="input-address" class="form-control form-control-alternative" name="Address" [(ngModel)]="patientDetails.Address" type="text">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-4">
+                    <div class="form-group">
+                      <label class="form-control-label" for="input-country">Contact Number</label>
+                      <input type="number" id="input-postal-code" class="form-control form-control-alternative" name="Contact_Number" [(ngModel)]="patientDetails.Contact_Number">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr class="my-4" />
+
+              <div class="pl-lg-4">
+                <div class="form-group grid">
+                  <label class="form-control-label"> {{fileUpload.value || 'No File Selected'}} </label>
+                  <input type="file" class="file-input" name="Patient_File" ngModel #fileUpload (change)="addNewPdf($event)">
+                  <span (click)="fileUpload.click()" class="material-icons attach-file-icon">attach_file</span>
+                  <small *ngIf="sizeLimitExceededFlag" [style]="'font-weight:500; margin-left:5px'" class="text-danger" > {{sizeLimitExceededError}}</small>
+                </div>
+            </div>
+
+            <div class="save-changes">
+              <button class="btn btn-primary" (click)="updateData()"> Save Changes </button>
+            </div>
+
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="alert alert-danger error-info" *ngIf="errorInPdf">
+    <i class="fa fa-exclamation-circle" style="color: red;" aria-hidden="true"> </i>
+    There was some error in combining PDF'S. Please try again later.
+  </div>
+
+</div>
+
+
+
+
+

@@ -1,0 +1,305 @@
+.search-patient-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  align-items: center;
+  flex-direction: column;
+}
+.search-patient-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: var(--dl-space-space-oneandhalfunits);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-oneandhalfunits);
+  background-color: var(--dl-color-primary1-blue80);
+}
+.search-patient-navbar-interactive {
+  width: 90%;
+  display: flex;
+  position: sticky;
+  max-width: var(--dl-size-size-maxwidth);
+  align-items: center;
+  padding-top: var(--dl-space-space-oneandhalfunits);
+  padding-left: var(--dl-space-space-threeunits);
+  border-radius: 50px;
+  padding-right: var(--dl-space-space-threeunits);
+  padding-bottom: var(--dl-space-space-oneandhalfunits);
+  justify-content: space-between;
+  background-color: var(--dl-color-gray-white);
+}
+
+.patient-details{
+    margin-top:10px;
+    
+}
+
+.pl-lg-4,
+.px-lg-4
+{
+    padding-left: 1.5rem !important;
+}
+
+.heading-small
+{
+    font-size: .75rem;
+
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+.text-muted
+{
+    color: #8898aa !important;
+}
+.mb-4,
+.my-4
+{
+    margin-bottom: 1.5rem !important;
+}
+
+.form-control
+{
+    font-size: .875rem;
+}
+.form-control-alternative
+{
+    transition: box-shadow .15s ease;
+
+    border: 0;
+    box-shadow: 0 1px 3px rgba(50, 50, 93, .15), 0 1px 0 rgba(0, 0, 0, .02);
+}
+
+.form-control-label
+{
+    font-size: .875rem;
+    font-weight: 600;
+
+    color: #525f7f;
+}
+
+.form-group
+{
+    margin-bottom: 1.5rem;
+}
+
+.col-lg-4, .col-lg-6, .col-8, .col-xl-8
+{
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.col-md-12
+{
+    max-width: 100%;
+
+    flex: 0 0 100%;
+}
+
+.row
+{
+    display: flex;
+
+    margin-right: -15px;
+    margin-left: -15px;
+
+    flex-wrap: wrap;
+}
+.card-body
+{
+    padding: 1.5rem;
+
+    flex: 1 1 auto;
+}
+.btn-sm,
+.btn-group-sm > .btn
+{
+    font-size: .75rem;
+}
+.btn-primary
+{
+    color: #fff;
+    border-color: #5e72e4;
+    background-color: #5e72e4;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+}
+
+.btn
+{
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+
+    display: inline-block;
+
+    padding: .625rem 1.25rem;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+
+    border: 1px solid transparent;
+    border-radius: .375rem;
+}
+.col-4
+{
+    max-width: 33.33333%;
+
+    flex: 0 0 33.33333%;
+}
+.text-right
+{
+    text-align: right !important;
+}
+.mb-0,
+.my-0
+{
+    margin-bottom: 0 !important;
+}
+.align-items-center
+{
+    align-items: center !important;
+}
+
+.card-header
+{
+    margin-bottom: 0;
+    padding: 1.25rem 1.5rem;
+
+    border-bottom: 1px solid rgba(0, 0, 0, .05);
+    background-color: #fff;
+}
+
+.bg-white
+{
+    background-color: #fff !important;
+}
+
+.border-0
+{
+    border: 0 !important;
+}
+.card-columns .card
+{
+    margin-bottom: 1.25rem;
+}
+.bg-secondary
+{
+    background-color: #f7fafc !important;
+}
+.shadow-sm
+{
+    box-shadow: 0 0 .5rem rgba(136, 152, 170, .075) !important;
+}
+
+
+.my-4
+{
+    margin-top: 1.5rem !important;
+}
+
+.mr-2,
+.mx-2
+{
+    margin-right: .5rem !important;
+}
+
+.font-weight-300
+{
+    font-weight: 300 !important;
+}
+
+.font-weight-light
+{
+    font-weight: 300 !important;
+}
+
+
+.description
+{
+    font-size: .875rem;
+}
+
+.card-profile-stats
+{
+    padding: 1rem 0;
+}
+.card-profile-stats > div
+{
+    margin-right: 1rem;
+    padding: .875rem;
+
+    text-align: center;
+}
+.card-profile-stats > div:last-child
+{
+    margin-right: 0;
+}
+.card-profile-stats > div .heading
+{
+    font-size: 1.1rem;
+    font-weight: bold;
+
+    display: block;
+}
+
+.mt-md-5,
+.my-md-5
+{
+    margin-top: 3rem !important;
+}
+
+.grid {
+  display: flex;
+  width: 100%;
+  grid-template-columns: 4fr 3fr;
+}
+
+.pdf-view{
+  width: 100%;
+  height: 1000px;
+  /* overflow: scroll; */
+}
+
+
+
+.file-input {
+  display: none;
+}
+
+.attach-file-icon{
+  margin-top: -3px;
+  color: var(--dl-color-primary1-blue80);
+  cursor:pointer
+}
+
+.save-changes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* height: 100px; You can adjust the height as needed */
+  
+}
+ .save-changes .btn{
+    border: 1px solid #ddd; 
+}
+
+
+.error-info{
+    height: 40px;
+    margin-top: 10px;
+    width: 550px;
+    padding: 10px 10px 10px 10px;
+    left: 30px;
+  }

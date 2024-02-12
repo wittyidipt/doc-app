@@ -1,0 +1,94 @@
+
+
+<div class="search-patient-header">
+  <header data-thq="thq-navbar" class="search-patient-navbar-interactive">
+    Please Enter Details Of New Patient
+    <mat-icon (click)="goToHome()" aria-hidden="false" class="home-icon" aria-label="Example home icon" fontIcon="home"></mat-icon>
+  </header>
+</div>
+
+<ng-template #validationError >
+  <small *ngIf="isSubmitted" [style]="'font-weight:500; margin-left:5px'" class="text-danger" > This field is required..</small>
+</ng-template>
+
+  <div class=" global container-fluid mt--7" >
+    <div class="row">
+      <div class="add-patient-card">
+        <div class="card bg-secondary shadow">
+          <div class="card-body">
+            <form #addPatientForm="ngForm" >
+              <h6 class="heading-small text-muted mb-4">User information</h6>
+                <div class="row">
+                  <div class="col-lg-6 form-group">
+                      <label class="form-control-label" for="input-username">Patient Name</label>
+                      <input type="text" id="input-username" class="form-control form-control-alternative" required placeholder="Patient's Name" value="xyz" name="Name" ngModel>
+                      <div *ngIf="!addPatientForm.controls['Name']?.invalid else validationError"></div>
+                  </div>
+                  <div class="col-lg-6 form-group">
+                      <label class="form-control-label" for="input-email">Email address</label>
+                      <input type="email" required name="Email_ID" id="input-email" class="form-control form-control-alternative" placeholder="jesse@example.com"  ngModel>
+                  </div>
+                  <div class="col-lg-6 form-group">
+                    <label class="form-control-label" for="input-DOR">Date Of Registration</label>
+                    <input type="date" required name="DOR" id="input-DOR" class="form-control form-control-alternative" placeholder="Last name" value="Jesse"  ngModel>
+                    <div *ngIf="!addPatientForm.controls['DOR']?.invalid else validationError"></div>
+                  </div>
+                  <div class="col-lg-6 form-group">
+                    <label class="form-control-label" for="input-ID">Patient ID</label>
+                    <input type="number" name="Patient_ID" required id="input-ID" class="form-control form-control-alternative" placeholder="1111" ngModel>
+                    <div *ngIf="!addPatientForm.controls['ID']?.invalid else validationError"></div>
+                  </div>
+                  <div class="col-lg-6 form-group">
+                    <label class="form-control-label" for="input-SEX">SEX</label>
+                    <input type="text" [value]="" id="input-SEX" class="form-control form-control-alternative" placeholder="Patient's Sex" name="SEX" ngModel>
+                  </div>
+                  <div class="col-lg-6 form-group">
+                    <label class="form-control-label" for="input-AGE">AGE</label>
+                    <input type="number" id="input-AGE" class="form-control form-control-alternative" placeholder="00" name="Age" ngModel #Age>
+                    <div *ngIf="Age.value && Age.value < '0'" >
+                      <small *ngIf="isSubmitted" [style]="'font-weight:500; margin-left:5px'" class="text-danger" > Age cannot be less than 0</small>
+                    </div>
+                  </div>
+              </div>
+
+              <!-- Address -->
+              <h6 class="heading-small text-muted mb-4">Contact information</h6>
+                <div class="row">
+                  <div class="col-lg-6 form-group">
+                    <label class="form-control-label" for="input-address">Address</label>
+                    <input id="input-address" class="form-control form-control-alternative" ngModel name="Address" placeholder="Home Address" value="Patient's Address" type="text">
+                  </div>
+                  <div class="col-lg-6 form-group">
+                      <label class="form-control-label" for="input-city">City</label>
+                      <input type="text" id="input-city" class="form-control form-control-alternative" placeholder="City" value="Shri Ganganagar">
+                  </div>
+                  <div class="col-lg-6 form-group">
+                      <label class="form-control-label" for="input-country">Contact Number</label>
+                      <input type="number" required id="input-postal-code" class="form-control form-control-alternative" placeholder="123456789" ngModel name="Contact_Number">
+                      <div *ngIf="!addPatientForm.controls['Contact_Number']?.invalid else validationError"></div>
+                  </div>
+                </div>
+
+                <!-- Patient Notes -->
+                <hr class="my-4" />
+                <h6 class="heading-small text-muted mb-4">Patient Notes</h6>
+                <div class="form-group">
+                    <label>Notes</label>
+                     <textarea rows="4" class="form-control form-control-alternative" placeholder="A few words about Patient ..." name="Patient_Notes" ngModel>Notes about the Patient</textarea>
+                </div>
+                <div class="form-group">
+                   <label> {{fileUpload.value || 'No File Selected'}} </label>
+                   <input type="file" class="file-input" name="Patient_File" ngModel #fileUpload  required>
+                  <mat-icon (click)="fileUpload.click()" class="attach-file-icon">attach_file</mat-icon>
+                  <small *ngIf="sizeLimitExceededFlag" [style]="'font-weight:500; margin-left:5px'" class="text-danger" > {{sizeLimitExceededError}}</small>
+               </div>
+            </form>
+            <div class="upload-btn">
+              <button class="btn-primary" (click)="createNewPatient(addPatientForm)"> Create new patient </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+

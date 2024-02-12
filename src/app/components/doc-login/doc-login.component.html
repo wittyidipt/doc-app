@@ -1,0 +1,52 @@
+<div class="home-header">
+  <header data-thq="thq-navbar" class="home-navbar-interactive">
+    <div>
+      <mat-icon (click)="goToHome()" aria-hidden="false" class="home-icon" aria-label="Example home icon" fontIcon="home"></mat-icon>
+      <span class="home-logo">PROJECT</span>
+    </div>
+  </header>
+</div>
+
+
+<div class="home-container">
+
+  <div class="home-details">
+    <div class="home-details1">
+      <div class="home-container1">
+        <span class="register-here-text">
+          If you don&apos;t have an account you can REGISTER-HERE
+        </span>
+      </div>
+
+    <img
+    alt="image"
+    src="https://as1.ftcdn.net/v2/jpg/01/71/30/00/1000_F_171300077_oady8uf9xnIq0LBGXozDgYEuaXXZOTs2.jpg"
+    class="home-details-image"/>
+      <h2 class="home-details-heading heading2">
+        <span>
+          Sign in to
+          Doc-Frontend-App
+        </span>
+
+
+      </h2>
+      <div class=" container-fluid mt--7">
+        <form #loginForm="ngForm" class="login-form">
+          <input type="email" name = "Email_ID" ngModel placeholder="DOC123@GMAIL.COM"  required  class="home-textinput1 input"/>
+          <input type="text"  name="Password" ngModel placeholder="Password" required class="password-input input"/>
+          <button type="button" (click)="attemptLogin(loginForm)" class="home-button button">Sign-In</button>
+        </form>
+        <span class="home-text4">Forgot password?</span>
+
+        <div *ngIf="attemptedLogin" class="alert alert-danger error-info " role="alert">
+          {{ errorCode == 401 ? text401 : text5xx  }}
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+</div>
+

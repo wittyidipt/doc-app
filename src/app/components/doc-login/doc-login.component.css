@@ -1,0 +1,214 @@
+:host {
+  display: contents;
+
+}
+.home-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  box-shadow: 5px 5px 10px 0px #be4410;
+  min-height: 100vh;
+  align-items: center;
+  background-color: rgba(217, 217, 217, 0.28);
+  flex-direction: column;
+}
+.home-header {
+  width: 100%;
+  border: 2px dashed rgba(120, 120, 120, 0.4);
+  display: flex;
+  align-items: center;
+  padding-top: var(--dl-space-space-oneandhalfunits);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-oneandhalfunits);
+  background-color: var(--dl-color-primary1-blue80);
+}
+
+.home-navbar-interactive {
+  width: 90%;
+  display: flex;
+  position: sticky;
+  max-width: var(--dl-size-size-maxwidth);
+  align-items: center;
+  padding-top: var(--dl-space-space-oneandhalfunits);
+  padding-left: var(--dl-space-space-threeunits);
+  border-radius: 50px;
+  padding-right: var(--dl-space-space-threeunits);
+  padding-bottom: var(--dl-space-space-oneandhalfunits);
+  justify-content: space-between;
+  background-color: var(--dl-color-gray-white);
+}
+
+.home-hero {
+  flex: 0 0 auto;
+  width: 100%;
+  border: 2px dashed rgba(120, 120, 120, 0.4);
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: var(--dl-color-primary1-blue80);
+}
+.home-details {
+  flex: 0 0 auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-details1 {
+  width: 100%;
+  height: 996px;
+  display: flex;
+  position: relative;
+  max-width: var(--dl-size-size-maxwidth);
+  align-items: center;
+  padding-top: var(--dl-space-space-fourunits);
+  padding-left: var(--dl-space-space-threeunits);
+  padding-right: var(--dl-space-space-threeunits);
+  padding-bottom: var(--dl-space-space-fourunits);
+  justify-content: center;
+}
+.home-container1 {
+  flex: 1;
+  left: 48px;
+  bottom: 388px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.home-text {
+  top: -384px;
+  left: 2px;
+  color: var(--dl-color-primary1-blue80);
+  width: 200px;
+  position: absolute;
+  font-size: 12px;
+  text-align: left;
+  font-family: "Inter";
+  font-weight: 400;
+  line-height: 1.15;
+  text-transform: none;
+  text-decoration: none;
+}
+.home-link {
+  display: contents;
+}
+
+.home-icon{
+  font-size: large;
+  padding: 0px 30px 19px 0px;
+  transform: scale(1.8);
+}
+
+.home-logo {
+  font-size: 2em;
+  font-family: "Lato";
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+.home-details-image {
+  top: 290px;
+  left: 334px;
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  object-fit: cover;
+  border-radius: var(--dl-radius-radius-round);
+  text-decoration: none;
+}
+.home-details-heading {
+  top: 89px;
+  left: 51px;
+  width: 400px;
+  font-size: 30px;
+  position: absolute;
+  text-align: left;
+  font-family: "Raleway";
+  line-height: 1.6;
+  font-weight: 600;
+}
+.login-form {
+  top: 203px;
+  left: 522px;
+  width: 597px;
+  height: 568px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  justify-content: center;
+}
+.home-button {
+  top: 200px;
+  left: 400px;
+  color: var(--dl-color-gray-white);
+  right: -100px;
+  width: 300px;
+  height: 45px;
+  position: absolute;
+  box-shadow: rgb(23, 105, 146) 5px 5px 10px 0px;
+  border-color: rgba(217, 217, 217, 0);
+  background-color: rgba(0, 116, 240, 0.79);
+}
+.password-input {
+  top: 60px;
+  left: 400px;
+  right: -100px;
+  width: 300px;
+  height: 42px;
+  position: absolute;
+  box-shadow: 5px 5px 10px 0px #b6d3e7;
+}
+
+.register-here-text{
+
+  top: -460px;
+  left: 2px;
+  color: black;
+  width: 250px;
+  position: absolute;
+  font-size: 18px;
+  text-align: left;
+  font-family: "Inter";
+  font-weight: 400;
+  line-height: 1.15;
+  text-transform: none;
+  text-decoration: none;
+}
+
+.home-textinput1 {
+  top: -20px;
+  left: 400px;
+  right: -100px;
+  width: 300px;
+  height: 42px;
+  position: absolute;
+  box-shadow: 5px 5px 10px 0px #b6d3e7;
+  border-color: var(--dl-color-gray-black);
+  background-color: #ffffff;
+}
+.home-text4 {
+  top: 310px;
+  left: 970px;
+  width: 100px;
+  color: var(--dl-color-gray-500);
+  right: 180px;
+  position: absolute;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  margin-left: 150px;
+  text-transform: uppercase;
+}
+
+.error-info{
+  top: 20px;
+  left: 800px;
+  right: -100px;
+  width: 500px;
+  height: 50px;
+}
