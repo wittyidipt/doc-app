@@ -22,7 +22,7 @@ export class HttpCallsService {
   searchPatient(Patient_ID: any){
 
     const headers = new HttpHeaders({
-      'AuthToken': localStorage.getItem("AuthToken") || ""
+      'AuthToken': sessionStorage.getItem("AuthToken") || ""
     })
     let reqUrl = this.patientUrl + "search-patient";
 
@@ -32,7 +32,7 @@ export class HttpCallsService {
   createNewPatient(data: any){
 
     const headers = new HttpHeaders({
-      'AuthToken': localStorage.getItem("AuthToken") || ""
+      'AuthToken': sessionStorage.getItem("AuthToken") || ""
     })
     let reqUrl = this.patientUrl + 'create';
     return this.http.post<any>(reqUrl,data, {headers: headers});
@@ -42,7 +42,7 @@ export class HttpCallsService {
   updatePatient(data: any){
 
     const headers = new HttpHeaders({
-      'AuthToken': localStorage.getItem("AuthToken") || ""
+      'AuthToken': sessionStorage.getItem("AuthToken") || ""
     })
     let reqUrl = this.patientUrl + 'update';
     return this.http.put<any>(reqUrl,data, {headers: headers});

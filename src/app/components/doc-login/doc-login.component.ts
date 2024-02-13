@@ -32,8 +32,8 @@ export class DocLoginComponent implements OnInit {
       next: (res) => {
         this.attemptedLogin = true;
         console.log(res);
-        localStorage.setItem('AuthToken', res['jwtToken']);
-        localStorage.setItem('isDoctorLoggedIn', "true");
+        sessionStorage.setItem('AuthToken', res['jwtToken']);
+        sessionStorage.setItem('isDoctorLoggedIn', "true");
         this.router.navigate(['welcome']);
       },
       error: (e) =>{

@@ -25,8 +25,8 @@ export class WelcomePageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(localStorage)
-    this.isDoctorLoggedIn = localStorage.getItem('isDoctorLoggedIn')?true : false;
+    console.log(sessionStorage)
+    this.isDoctorLoggedIn = sessionStorage.getItem('isDoctorLoggedIn')?true : false;
   }
 
 }
