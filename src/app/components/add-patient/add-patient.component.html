@@ -40,7 +40,7 @@
                   </div>
                   <div class="col-lg-6 form-group">
                     <label class="form-control-label" for="input-SEX">SEX</label>
-                    <input type="text" [value]="" id="input-SEX" class="form-control form-control-alternative" placeholder="Patient's Sex" name="SEX" ngModel>
+                    <input type="text" [value]="" id="input-SEX" class="form-control form-control-alternative" placeholder="Patient's Sex" name="SEX" ngModel>    
                   </div>
                   <div class="col-lg-6 form-group">
                     <label class="form-control-label" for="input-AGE">AGE</label>
@@ -64,8 +64,15 @@
                   </div>
                   <div class="col-lg-6 form-group">
                       <label class="form-control-label" for="input-country">Contact Number</label>
-                      <input type="number" required id="input-postal-code" class="form-control form-control-alternative" placeholder="123456789" ngModel name="Contact_Number">
-                      <div *ngIf="!addPatientForm.controls['Contact_Number']?.invalid else validationError"></div>
+                      <input type="tel" pattern="[789][0-9]{9}" required id="input-postal-code" class="form-control form-control-alternative" placeholder="123456789" ngModel name="Contact_Number">
+                      <div *ngIf="addPatientForm.controls['Contact_Number'].errors">
+                        <!-- Null error -->
+                        <div *ngIf="!addPatientForm.controls['Contact_Number'].errors['required'] else validationError"></div>
+                        <!-- Pattern Error -->
+                        <div *ngIf="addPatientForm.controls['Contact_Number'].errors['pattern'] "> 
+                          <small class="text-danger"> Enter the number in required format: 123-456-789 </small>
+                        </div>
+                      </div>
                   </div>
                 </div>
 
